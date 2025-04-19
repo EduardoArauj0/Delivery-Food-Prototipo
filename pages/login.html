@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Cadastro</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <div class="tabs">
+      <button onclick="mostrarFormulario('login')" class="tab ativo">Login</button>
+      <button onclick="mostrarFormulario('cadastro')" class="tab">Cadastro</button>
+    </div>
+
+    <div id="form-login" class="formulario ativo">
+      <h2>Entrar</h2>
+      <input type="email" placeholder="E-mail" />
+      <input type="password" placeholder="Senha" />
+      <button class="btn-vermelho">Entrar</button>
+    </div>
+
+    <div id="form-cadastro" class="formulario">
+      <h2>Cadastrar</h2>
+      <input type="text" placeholder="Nome completo" />
+      <input type="email" placeholder="E-mail" />
+      <input type="password" placeholder="Senha" />
+      <button class="btn-vermelho">Cadastrar</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarFormulario(tipo) {
+      document.querySelectorAll('.formulario').forEach(f => f.classList.remove('ativo'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('ativo'));
+      document.getElementById(`form-${tipo}`).classList.add('ativo');
+      document.querySelector(`.tab[onclick*="${tipo}"]`).classList.add('ativo');
+    }
+  
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab') || 'login';
+    mostrarFormulario(tab);
+  </script>
+  
+</body>
+</html>
