@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MVP Delivery</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>MVP Delivery</h1>
+    <nav>
+      <button onclick="mostrarLogin()">Login</button>
+      <button onclick="mostrarCadastro()">Cadastro</button>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <h2>Restaurantes em destaque</h2>
+    <section class="restaurantes">
+      <div class="card">
+        <img src="./image/Pizzaria.jpg" alt="Restaurante 1" />
+        <h3>Pizza da Mama</h3>
+        <button onclick="abrirRestaurante('Pizza da Mama')">Ver Menu</button>
+      </div>
+      <div class="card">
+        <img src="./image/Hamburgueria.jpg" alt="Restaurante 2" />
+        <h3>Burger Express</h3>
+        <button onclick="abrirRestaurante('Burger Express')">Ver Menu</button>
+      </div>
+      <div class="card">
+        <img src="./image/Restaurante Japones.png" alt="Restaurante 3" />
+        <h3>Sushi House</h3>
+        <button onclick="abrirRestaurante('Sushi House')">Ver Menu</button>
+      </div>
+    </section>
+  </main>
+
+  <aside id="carrinho">
+    <h3>Carrinho</h3>
+    <ul id="itens-carrinho"></ul>
+    <button onclick="finalizarPedido()">Finalizar Pedido</button>
+  </aside>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
