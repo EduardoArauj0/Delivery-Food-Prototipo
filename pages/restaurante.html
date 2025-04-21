@@ -8,38 +8,15 @@
 </head>
 <body>
   <header>
-    <h1>Pizza da Mama</h1>
     <nav>
       <a href="../index.html"><button>Início</button></a>
     </nav>
   </header>
 
   <main>
-    <h2>Cardápio</h2>
-    <section class="produtos">
-      <div class="produto-card">
-        <img src="../image/" alt="Pizza Calabresa" />
-        <h3>Pizza de Calabresa</h3>
-        <p>Molho de tomate, mussarela, calabresa e cebola</p>
-        <span>R$ 35,00</span>
-        <button onclick="adicionarAoCarrinho('Pizza Calabresa')">Adicionar</button>
-      </div>
-      <div class="produto-card">
-        <img src="../image/" alt="Pizza Portuguesa" />
-        <h3>Pizza Portuguesa</h3>
-        <p>Presunto, ovo, cebola, pimentão e azeitona</p>
-        <span>R$ 38,00</span>
-        <button onclick="adicionarAoCarrinho('Pizza Portuguesa')">Adicionar</button>
-      </div>
-      <div class="produto-card">
-        <img src="../image/" alt="Pizza 4 Queijos" />
-        <h3>Pizza 4 Queijos</h3>
-        <p>Parmesão, gorgonzola, mussarela e catupiry</p>
-        <span>R$ 40,00</span>
-        <button onclick="adicionarAoCarrinho('Pizza 4 Queijos')">Adicionar</button>
-      </div>
-    </section>
-  </main>
+    <h2 id="titulo-restaurante">Cardápio</h2>
+    <section class="produtos" id="lista-produtos"></section>
+  </main>  
 
   <aside id="carrinho">
     <h3>Carrinho</h3>
@@ -48,5 +25,6 @@
   </aside>
 
   <script src="../js/script.js"></script>
+  <script src="../js/restaurante.js"></script>
 </body>
 </html>
