@@ -10,28 +10,34 @@
   <header>
     <h1>MVP Delivery</h1>
     <nav>
-        <a href="./pages/login.html?tab=login"><button>Login</button></a>
-        <a href="./pages/login.html?tab=cadastro"><button>Cadastro</button></a>
-      </nav>
+      <a href="./pages/login.html?tab=login"><button>Login</button></a>
+      <a href="./pages/login.html?tab=cadastro"><button>Cadastro</button></a>
+    </nav>
   </header>
 
   <main id="conteudo-principal">
     <h2>Restaurantes em destaque</h2>
     <section class="restaurantes">
       <div class="card">
-        <img src="./image/Pizzaria.jpg" alt="Restaurante 1" />
+        <img src="./image/Pizza da Mama/Pizzaria.jpg" alt="Restaurante 1" />
         <h3>Pizza da Mama</h3>
-        <button onclick="abrirRestaurante('Pizza da Mama')">Ver Menu</button>
+        <a href="./pages/restaurante.html?nome=Pizza da Mama">
+          <button>Ver Menu</button>
+        </a>
       </div>
       <div class="card">
-        <img src="./image/Hamburgueria.jpg" alt="Restaurante 2" />
+        <img src="./image/Burger Express/Hamburgueria.jpg" alt="Restaurante 2" />
         <h3>Burger Express</h3>
-        <button onclick="abrirRestaurante('Burger Express')">Ver Menu</button>
+        <a href="./pages/restaurante.html?nome=Burger Express">
+          <button>Ver Menu</button>
+        </a>
       </div>
       <div class="card">
-        <img src="./image/Restaurante Japones.png" alt="Restaurante 3" />
+        <img src="./image/Sushi House/Restaurante Japones.png" alt="Restaurante 3" />
         <h3>Sushi House</h3>
-        <button onclick="abrirRestaurante('Sushi House')">Ver Menu</button>
+        <a href="./pages/restaurante.html?nome=Sushi House">
+          <button>Ver Menu</button>
+        </a>      
       </div>
     </section>
   </main>
