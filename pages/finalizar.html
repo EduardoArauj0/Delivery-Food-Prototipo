@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finalizar Pedido</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/finalizar.css" />
+</head>
+<body>
+  <main class="finalizar-container">
+    <h2>Finalizar Pedido</h2>
+
+    <section id="lista-itens">    </section>
+
+    <div class="total">
+      <strong>Total: </strong><span id="valor-total">R$ 0,00</span>
+    </div>
+
+    <div class="pagamento">
+      <label for="forma-pagamento">Forma de Pagamento:</label>
+      <select id="forma-pagamento">
+        <option value="pix">Pix</option>
+        <option value="cartao">Cartão de Crédito</option>
+        <option value="dinheiro">Dinheiro</option>
+      </select>
+    </div>
+
+    <div class="avaliacao">
+      <label for="avaliacao">Avaliação do restaurante:</label>
+      <textarea id="avaliacao" rows="4" placeholder="Deixe sua opinião..."></textarea>
+    </div>
+
+    <button onclick="confirmarPedido()">Confirmar Pedido</button>
+  </main>
+
+  <script src="../js/finalizar.js"></script>
+</body>
+</html>
