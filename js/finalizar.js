@@ -22,8 +22,11 @@ function carregarItensFinalizacao() {
     const avaliacao = document.getElementById("avaliacao").value;
   
     alert(`Pedido confirmado com pagamento via ${pagamento}.
-  Avaliação: ${avaliacao || "Sem comentário"}`);
-  }
+Avaliação: ${avaliacao || "Sem comentário"}`);
+
+    localStorage.removeItem("carrinho"); 
+    window.location.href = "/index.html";
+    }
   
   carregarItensFinalizacao();
   
