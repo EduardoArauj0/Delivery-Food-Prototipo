@@ -44,9 +44,9 @@ header {
   
   .card img {
     width: 100%;
-    border-radius: 10px;
-    height: 140px;
+    height: 160px;
     object-fit: cover;
+    border-radius: 10px;
   }
   
   .card button {
@@ -80,3 +80,27 @@ header {
     justify-content: center;
   }
   
+  .restaurantes,
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .restaurantes,
+    .produtos {
+      grid-template-columns: 1fr;
+    }
+
+    .card img,
+    .produto-card img {
+      height: 120px;
+    }
+
+    .card button,
+    .produto-card button {
+      font-size: 0.9rem;
+      padding: 0.4rem;
+    }
+  }

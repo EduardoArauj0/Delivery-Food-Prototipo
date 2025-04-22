@@ -34,4 +34,35 @@
     cursor: pointer;
     font-weight: bold;
   }
+
+  main {
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    #carrinho {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 80%;
+      max-width: 300px;
+      background-color: white;
+      transition: right 0.3s ease;
+      z-index: 999;
+      box-shadow: -2px 0 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    #carrinho.visivel {
+      right: 0;
+    }
+  
+    #btn-toggle-carrinho {
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      font-size: 1.6rem;
+    }
+  }
   
