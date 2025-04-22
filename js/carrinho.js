@@ -26,6 +26,10 @@
       lista.appendChild(li);
     });
   }
+
+  function finalizarPedido() {
+    window.location.href = "../pages/finalizar.html";
+  }  
   
   function removerDoCarrinho(index) {
   carrinho.splice(index, 1);
