@@ -1,3 +1,5 @@
+const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
 function carregarItensFinalizacao() {
     const lista = document.getElementById("lista-itens");
     const totalSpan = document.getElementById("valor-total");
@@ -7,11 +9,9 @@ function carregarItensFinalizacao() {
   
     carrinho.forEach(item => {
       const li = document.createElement("li");
-      li.innerText = item;
+      li.innerText = `${item.nome} - R$ ${item.preco.toFixed(2).replace(".", ",")}`;
       lista.appendChild(li);
-  
-      const preco = extrairPreco(item);
-      total += preco;
+      total += item.preco;
     });
   
     totalSpan.innerText = `R$ ${total.toFixed(2).replace(".", ",")}`;
