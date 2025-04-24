@@ -25,13 +25,127 @@
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
-  
-  .pagamento,
-  .avaliacao {
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
+
+  .formas-pagamento {
+    margin-bottom: 2rem;
   }
+
+  .formas-pagamento h3 {
+    margin-bottom: 1rem;
+  }
+
+  .opcoes {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .opcao {
+    flex: 1;
+    background-color: var(--creme);
+    border: 2px solid var(--azul);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: bold;
+  }
+
+  .opcao:hover,
+  .opcao.selecionada {
+    background-color: var(--verde);
+    border-color: var(--vermelho);
+    color: var(--azul);
+  }
+
+  .detalhe-pagamento {
+    display: none;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .detalhe-pagamento input,
+  .detalhe-pagamento select {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.6rem;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .chave-pix button {
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .chave-pix button.copiado {
+    background-color: var(--verde);
+  }
+
+  .form-cartao {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .form-titulo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-cartao label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+  
+  .form-cartao input,
+  .form-cartao select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  
+  .form-linha {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .form-linha input {
+    flex: 1;
+  }
+   
+  .avaliacao label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  textarea#avaliacao {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--creme);
+    color: var(--azul);
+    resize: vertical;
+  }  
   
   textarea {
     resize: vertical;

@@ -16,7 +16,29 @@ function carregarItensFinalizacao() {
   
     totalSpan.innerText = `R$ ${total.toFixed(2).replace(".", ",")}`;
   }
+
+  function selecionarPagamento(metodo) {
+    document.querySelectorAll(".opcao").forEach((el) => el.classList.remove("selecionada"));
+    document.querySelectorAll(".detalhe-pagamento").forEach((el) => el.style.display = "none");
   
+    document.querySelector(`.opcao[onclick*="${metodo}"]`).classList.add("selecionada");
+    document.getElementById(`detalhes-${metodo}`).style.display = "block";
+  }
+
+  function copiarChavePix() {
+    const chave = document.getElementById("pix-chave").innerText;
+    navigator.clipboard.writeText(chave);
+  
+    const botao = document.getElementById("copiar-pix");
+    botao.innerText = "Copiado!";
+    botao.classList.add("copiado");
+  
+    setTimeout(() => {
+      botao.innerText = "Copiar";
+      botao.classList.remove("copiado");
+    }, 2000);
+  }
+    
   function confirmarPedido() {
     const pagamento = document.getElementById("forma-pagamento").value;
     const avaliacao = document.getElementById("avaliacao").value;
