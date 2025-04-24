@@ -19,37 +19,25 @@
   <main>
     <section id="aba-pedidos" class="aba ativa">
       <h2>📦 Pedidos Recebidos</h2>
-      <div class="pedido-card">
-        <p><strong>Cliente:</strong> João Silva</p>
-        <p><strong>Itens:</strong> Pizza Calabresa, Refrigerante</p>
-        <p><strong>Status:</strong> <span class="status">Pendente</span></p>
-        <button>Marcar como em preparo</button>
-      </div>
+      <div id="lista-pedidos"></div>
     </section>
 
     <section id="aba-cardapio" class="aba">
       <h2>🍽 Gerenciar Cardápio</h2>
 
       <form id="form-produto">
-        <input type="text" placeholder="Nome do produto" required />
-        <input type="number" placeholder="Preço (R$)" step="0.01" required />
-        <input type="text" placeholder="URL da imagem" />
+        <input type="text" id="produto-nome" placeholder="Nome do produto" required />
+        <input type="number" id="produto-preco" placeholder="Preço (R$)" step="0.01" required />
+        <input type="text" id="produto-imagem" placeholder="URL da imagem" />
         <button type="submit">Adicionar Produto</button>
       </form>
 
-      <div class="lista-produtos">
-        <div class="produto-item">
-          <img src="../../image/Pizza da Mama/Pizza Calabresa.webp" alt="Pizza Calabresa" />
-          <div>
-            <h3>Pizza Calabresa</h3>
-            <p>R$ 35,00</p>
-          </div>
-          <button class="remover">🗑</button>
-        </div>
-      </div>
+      <div class="lista-produtos" id="lista-produtos"></div>
     </section>
   </main>
 
-  <script src="../../js/painel-restaurante.js"></script>
+  <script src="../../js/empresas/painel-restaurante.js"></script>
+  <script src="../../js/empresas/pedidos.js"></script>
+  <script src="../../js/empresas/produtos.js"></script>
 </body>
 </html>
