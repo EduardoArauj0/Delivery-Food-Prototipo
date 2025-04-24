@@ -1,0 +1,84 @@
+.topo {
+    background-color: var(--azul);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--vermelho);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .aba {
+    display: none;
+    padding: 2rem;
+  }
+  
+  .aba.ativa {
+    display: block;
+  }
+  
+  .pedido-card {
+    background: white;
+    border: 1px solid var(--azul);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px #ccc;
+  }
+  
+  .pedido-card .status {
+    color: var(--vermelho);
+  }
+  
+  form#form-produto {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  form#form-produto input {
+    flex: 1 1 200px;
+  }
+  
+  .lista-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .produto-item {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .produto-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .produto-item button.remover {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--vermelho);
+  }
+  
