@@ -27,11 +27,11 @@
   }
   
   .pedido-card {
-    background: white;
-    border: 1px solid var(--azul);
+    margin-bottom: 1.5rem;
     padding: 1rem;
-    margin-bottom: 1rem;
     border-radius: 8px;
+    border: 1px solid var(--azul);
+    background-color: white;
     box-shadow: 2px 2px 10px #ccc;
   }
   
@@ -80,5 +80,48 @@
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--vermelho);
+  }
+  
+  .status {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .status.pendente {
+    background-color: #fff0f0;
+    color: var(--vermelho);
+    border: 1px solid var(--vermelho);
+  }
+  
+  .status.preparo {
+    background-color: #f0fff0;
+    color: var(--verde);
+    border: 1px solid var(--verde);
+  }
+  
+  .status.finalizado {
+    background-color: #f0f0ff;
+    color: var(--azul);
+    border: 1px solid var(--azul);
+  }
+  
+  .pedido-card button {
+    background-color: var(--azul);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+  }
+  
+  .pedido-card button:hover {
+    background-color: var(--vermelho);
   }
   

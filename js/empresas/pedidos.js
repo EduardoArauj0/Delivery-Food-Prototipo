@@ -1,7 +1,7 @@
 const pedidos = [
     {
       cliente: "João Silva",
-      itens: ["Pizza Calabresa", "Refrigerante"],
+      itens: ["Pizza Calabresa"],
       status: "Pendente"
     },
     {
@@ -11,24 +11,33 @@ const pedidos = [
     }
   ];
   
-  function renderizarPedidos() {
-    const aba = document.getElementById("aba-pedidos");
-    aba.innerHTML = "<h2>📦 Pedidos Recebidos</h2>";
+function renderizarPedidos() {
+    const aba = document.getElementById("lista-pedidos");
+    aba.innerHTML = "";
   
     pedidos.forEach((pedido, index) => {
       const div = document.createElement("div");
       div.className = "pedido-card";
+  
+      let statusClass = "pendente";
+  
+      if (pedido.status === "Em preparo") {
+        statusClass = "preparo";
+      } else if (pedido.status === "Finalizado") {
+        statusClass = "finalizado";
+      }
+  
       div.innerHTML = `
         <p><strong>Cliente:</strong> ${pedido.cliente}</p>
         <p><strong>Itens:</strong> ${pedido.itens.join(", ")}</p>
-        <p><strong>Status:</strong> <span class="status">${pedido.status}</span></p>
-        <button onclick="atualizarStatus(${index})">Avançar Status</button>
+        <p><strong>Status:</strong> <span class="status ${statusClass}">${pedido.status}</span></p>
+        ${pedido.status !== "Finalizado" ? `<button onclick="atualizarStatus(${index})">Avançar Status</button>` : ""}
       `;
       aba.appendChild(div);
     });
   }
   
-  function atualizarStatus(index) {
+function atualizarStatus(index) {
     const statusAtual = pedidos[index].status;
     const proximoStatus =
       statusAtual === "Pendente"
