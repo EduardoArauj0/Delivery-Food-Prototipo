@@ -19,7 +19,7 @@ const produtos = [
           <h3>${produto.nome}</h3>
           <p>R$ ${produto.preco.toFixed(2).replace(".", ",")}</p>
         </div>
-        <button class="remover" onclick="removerProduto(${index})">🗑</button>
+        <button class="remover" onclick="removerProduto(${index})">❌</button>
       `;
       lista.appendChild(div);
     });

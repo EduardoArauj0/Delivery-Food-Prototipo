@@ -47,7 +47,7 @@ function carregarItensFinalizacao() {
 Avaliação: ${avaliacao || "Sem comentário"}`);
 
     localStorage.removeItem("carrinho"); 
-    window.location.href = "/index.html";
+    window.location.href = "./src/index.html";
     }
   
   carregarItensFinalizacao();
