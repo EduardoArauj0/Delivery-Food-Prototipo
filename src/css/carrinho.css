@@ -5,6 +5,7 @@
     top: 80px;
     width: 250px;
     background-color: white;
+    font-size: 0.9rem;
     padding: 1rem;
     border-left: 2px solid var(--azul);
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
