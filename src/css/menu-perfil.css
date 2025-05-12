@@ -1,15 +1,13 @@
-/* Botão que abre o menu */
 #btn-perfil {
-  background-color: var(--vermelho);
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 5px;
-  margin-top: 1rem;
-  cursor: pointer;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--vermelho);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-/* Overlay escurecido atrás do menu */
 #overlay {
   position: fixed;
   top: 0; left: 0;
@@ -23,7 +21,6 @@
   display: block;
 }
 
-/* Menu lateral */
 #menu-perfil {
   position: fixed;
   top: 0; left: -100%;
@@ -44,7 +41,6 @@
   left: 0;
 }
 
-/* Topo do menu com avatar e nome */
 .perfil-topo {
   display: flex;
   align-items: center;
@@ -65,7 +61,6 @@
   margin-right: 0.5rem;
 }
 
-/* Estrutura dos grupos de itens */
 .menu-conteudo {
   flex: 1;
   display: flex;
@@ -91,7 +86,6 @@
   cursor: pointer;
 }
 
-/* Botão de fechar o menu */
 #fechar-menu {
   background: none;
   border: none;
