@@ -1,3 +1,4 @@
+/* Botão que abre o menu */
 #btn-perfil {
   background-color: var(--vermelho);
   color: white;
@@ -8,6 +9,7 @@
   cursor: pointer;
 }
 
+/* Overlay escurecido atrás do menu */
 #overlay {
   position: fixed;
   top: 0; left: 0;
@@ -17,6 +19,11 @@
   z-index: 998;
 }
 
+#overlay.visivel {
+  display: block;
+}
+
+/* Menu lateral */
 #menu-perfil {
   position: fixed;
   top: 0; left: -100%;
@@ -27,16 +34,17 @@
   transition: left 0.3s ease;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #menu-perfil.aberto {
   left: 0;
 }
 
-#overlay.visivel {
-  display: block;
-}
-
+/* Topo do menu com avatar e nome */
 .perfil-topo {
   display: flex;
   align-items: center;
@@ -57,27 +65,7 @@
   margin-right: 0.5rem;
 }
 
-#menu-perfil ul {
-  list-style: none;
-  padding: 0;
-}
-
-#menu-perfil li {
-  padding: 0.8rem 0;
-  border-bottom: 1px solid #eee;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-
-#menu-perfil {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
+/* Estrutura dos grupos de itens */
 .menu-conteudo {
   flex: 1;
   display: flex;
@@ -103,6 +91,7 @@
   cursor: pointer;
 }
 
+/* Botão de fechar o menu */
 #fechar-menu {
   background: none;
   border: none;

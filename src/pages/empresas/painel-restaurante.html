@@ -6,6 +6,7 @@
   <title>Painel do Restaurante</title>
   <link rel="stylesheet" href="../../css/base.css" />
   <link rel="stylesheet" href="../../css/painel-restaurante.css" />
+  <link rel="stylesheet" href="../../css/menu-perfil.css" />
 </head>
 <body>
   <header class="topo">
@@ -13,6 +14,7 @@
     <nav>
       <button onclick="alternarAba('pedidos')">Pedidos</button>
       <button onclick="alternarAba('cardapio')">Cardápio</button>
+      <button id="btn-perfil">Perfil</button>
     </nav>
   </header>
 
@@ -36,8 +38,38 @@
     </section>
   </main>
 
+  <div id="overlay"></div>
+
+  <aside id="menu-perfil">
+    <div class="perfil-topo">
+      <div class="avatar">US</div>
+      <strong>Olá Usuário</strong>
+      <button id="fechar-menu">×</button>
+    </div>
+
+    <div class="menu-conteudo">
+      <ul class="menu-principal">
+          <li>Conversas</li>
+          <li>Notificações</li>
+          <li>Dados da conta</li>
+          <li>Pagamentos</li>
+          <li>Cupons</li>
+          <li>Código de entrega</li>
+          <li>Favoritos</li>
+          <li>Endereços</li>
+      </ul>
+      <ul class="menu-final">
+        <li>Ajuda</li>
+        <li>Configurações</li>
+        <li>Segurança</li>
+      </ul>
+    </div>
+  </aside>
+
   <script src="../../js/empresas/painel-restaurante.js"></script>
   <script src="../../js/empresas/pedidos.js"></script>
   <script src="../../js/empresas/produtos.js"></script>
+  <script src="../../js/menu-perfil.js"></script>
+
 </body>
 </html>
