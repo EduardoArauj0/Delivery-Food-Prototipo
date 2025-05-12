@@ -45,7 +45,7 @@
 
   function finalizarPedido() {
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    window.location.href = "../pages/finalizar.html";
+    window.location.href = "/src/pages/finalizar.html";
   }
     
   function removerDoCarrinho(index) {
