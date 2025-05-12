@@ -1,0 +1,111 @@
+#btn-perfil {
+  background-color: var(--vermelho);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 998;
+}
+
+#menu-perfil {
+  position: fixed;
+  top: 0; left: -100%;
+  height: 100%;
+  width: 280px;
+  background-color: white;
+  z-index: 999;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+#menu-perfil.aberto {
+  left: 0;
+}
+
+#overlay.visivel {
+  display: block;
+}
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  background-color: var(--azul);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+#menu-perfil ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu-perfil li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+#menu-perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-principal,
+.menu-final {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-principal li,
+.menu-final li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+#fechar-menu {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
